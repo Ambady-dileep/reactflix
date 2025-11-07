@@ -14,12 +14,12 @@
 }
 .footer ul{
     display:grid;
-    grid-template-columns:auto auto auto auto;
+    grid-template-columns: repeat(4, auto);
     gap:15px;
-    margin-button:30px;
+    margin-bottom: 30px;
     list-style:none;
 }
 .copyright-text{
     color:gray;
-    font-weight:14px;
+    font-size:14px;
 }
