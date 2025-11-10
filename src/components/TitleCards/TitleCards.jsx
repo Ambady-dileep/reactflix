@@ -1,12 +1,13 @@
 import React, { useEffect, useRef, useState } from 'react'
 import './TitleCards.css'
 import Cards_data from '../../assets/cards/Cards_data'
-import {Link} from "react-router-dom"
+import { Link } from "react-router-dom"
 
 const TitleCards = ({title, category}) => {
-    const cardsRef = useRef();
 
     const [apiData, setApiData] = useState([]);
+    const cardsRef = useRef();
+
     const options = {
         method: 'GET',
         headers: {
@@ -23,7 +24,7 @@ const TitleCards = ({title, category}) => {
 
     useEffect(()=>{
 
-        fetch(`https://api.themoviedb.org/3/movie/${category?category:"now_playing"}?language=en-US&page=1`, options)
+        fetch(`https://api.themoviedb.org/3/movie/${category?category:"now_playing"}?language=en-US&page=1`,  options)
         .then(res => res.json())
         .then(res => setApiData(res.results))
         .catch(err => console.error(err));
