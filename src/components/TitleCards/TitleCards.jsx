@@ -47,3 +47,4 @@ const TitleCards = ({title, category}) => {
 }
 
 export default TitleCards;
+
